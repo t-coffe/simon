@@ -9,53 +9,85 @@ vert.style.backgroundColor =  "lightgreen";
 bleu.style.backgroundColor =  "lightblue";
 jaune.style.backgroundColor = "lightyellow";
 
-
 const funcRed = ()=> {
-  if (rouge.style.backgroundColor === "lightcoral") {
-    rouge.style.backgroundColor = "red";
-    rouge.style.border = "solid" ;
-  }else {
+  rouge.style.backgroundColor = "red";
+  rouge.style.border = "solid" ;
+  setTimeout(() => {
     rouge.style.backgroundColor = "lightcoral";
     rouge.style.border = "dashed" ;
-  }
+  }, 1000);
 } 
 
-rouge.addEventListener('click', funcRed);
+//rouge.addEventListener('click', funcRed);
 
 const funcGreen = ()=> {
-  if (vert.style.backgroundColor === "lightgreen") {
-    vert.style.backgroundColor = "green";
-    vert.style.border = "solid" ;
-  }else {
+  vert.style.backgroundColor = "green";
+  vert.style.border = "solid" ;
+  setTimeout(() => {
     vert.style.backgroundColor = "lightgreen";
     vert.style.border = "dashed" ;
-  }
+  }, 1000);
 } 
 
-vert.addEventListener('click', funcGreen);
+//vert.addEventListener('click', funcGreen);
 
 
 const funcBlue = ()=> {
-  if (bleu.style.backgroundColor === "lightblue") {
-    bleu.style.backgroundColor = "blue";
-    bleu.style.border = "solid" ;
-  }else {
+  bleu.style.backgroundColor = "blue";
+  bleu.style.border = "solid" ;
+  setTimeout(() => {
     bleu.style.backgroundColor = "lightblue";
     bleu.style.border = "dashed" ;
-  }
+  }, 1000);
 } 
 
-bleu.addEventListener('click', funcBlue);
+//bleu.addEventListener('click', funcBlue);
 
 
 const funcYellow = ()=> {
-  if (jaune.style.backgroundColor === "lightyellow") {
-    jaune.style.backgroundColor = "yellow";
-    jaune.style.border = "solid" ;
-  }else {
+  jaune.style.backgroundColor = "yellow";
+  jaune.style.border = "solid" ;
+  setTimeout(() => {
     jaune.style.backgroundColor = "lightyellow";
     jaune.style.border = "dashed" ;
-  }
+  }, 1000);
 }
 
-jaune.addEventListener('click', funcYellow);
+//jaune.addEventListener('click', funcYellow);
+
+const tab = [];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+const funcNBtableau = () => {
+  let index = 0;
+  const interval = setInterval(
+    ()=>{
+      
+    if (tab[i] === 0) {
+      funcRed();
+      } else if (tab[i] === 1) {
+        funcGreen();
+      } else if (tab[i] === 2) {
+        funcBlue();
+      } else if (tab[i] === 3) {  
+        funcYellow();
+      }
+      index++;
+      
+      if(index === tab.length){
+        clearInterval(interval);
+      }
+    }
+    ,500)
+
+}
+
+rouge.addEventListener('click', ()=> {
+  let hasard = getRandomInt(4);
+  tab.push(hasard);
+  console.log(tab);
+  funcNBtableau();
+})
