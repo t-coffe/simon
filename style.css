@@ -1,0 +1,31 @@
+article {
+  display: flex;
+  justify-content: space-around;
+}
+div {
+  margin-bottom: 4vw;
+}
+.rouge {
+  background-color: lightcoral;
+  height: 22vw;
+  width: 40vw;
+  border: dashed black;
+}
+.vert {
+  background-color:lightgreen;
+  height: 22vw;
+  width: 40vw;
+  border: dashed black;
+}
+.bleu {
+  background-color: lightblue;
+  height: 22vw;
+  width: 40vw;
+  border: dashed black;
+}
+.jaune {
+  background-color: lightgoldenrodyellow;
+  height: 22vw;
+  width: 40vw;
+  border: dashed black;
+}
