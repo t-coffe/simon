@@ -15,10 +15,9 @@ const funcRed = ()=> {
   setTimeout(() => {
     rouge.style.backgroundColor = "lightcoral";
     rouge.style.border = "dashed" ;
-  }, 1000);
+  }, 350);
 } 
 
-//rouge.addEventListener('click', funcRed);
 
 const funcGreen = ()=> {
   vert.style.backgroundColor = "green";
@@ -26,10 +25,9 @@ const funcGreen = ()=> {
   setTimeout(() => {
     vert.style.backgroundColor = "lightgreen";
     vert.style.border = "dashed" ;
-  }, 1000);
+  }, 350);
 } 
 
-//vert.addEventListener('click', funcGreen);
 
 
 const funcBlue = ()=> {
@@ -38,10 +36,9 @@ const funcBlue = ()=> {
   setTimeout(() => {
     bleu.style.backgroundColor = "lightblue";
     bleu.style.border = "dashed" ;
-  }, 1000);
+  }, 350);
 } 
 
-//bleu.addEventListener('click', funcBlue);
 
 
 const funcYellow = ()=> {
@@ -50,10 +47,9 @@ const funcYellow = ()=> {
   setTimeout(() => {
     jaune.style.backgroundColor = "lightyellow";
     jaune.style.border = "dashed" ;
-  }, 1000);
+  }, 350);
 }
 
-//jaune.addEventListener('click', funcYellow);
 
 const tab = [];
 
@@ -66,13 +62,13 @@ const funcNBtableau = () => {
   const interval = setInterval(
     ()=>{
       
-    if (tab[i] === 0) {
+    if (tab[index] === 0) {
       funcRed();
-      } else if (tab[i] === 1) {
+      } else if (tab[index] === 1) {
         funcGreen();
-      } else if (tab[i] === 2) {
+      } else if (tab[index] === 2) {
         funcBlue();
-      } else if (tab[i] === 3) {  
+      } else if (tab[index] === 3) {  
         funcYellow();
       }
       index++;
@@ -81,7 +77,7 @@ const funcNBtableau = () => {
         clearInterval(interval);
       }
     }
-    ,500)
+    ,550)
 
 }
 
